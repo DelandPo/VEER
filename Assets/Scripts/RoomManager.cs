@@ -5,6 +5,7 @@ using UnityEditor;
 using System.IO;
 using UnityEditor.Experimental.EditorVR.Core;
 using UnityEditor.SceneManagement;
+using UnityEngine.UI;
 
 
 public class RoomManager : MonoBehaviour {
@@ -12,6 +13,7 @@ public class RoomManager : MonoBehaviour {
     private string sampleRoomPath = "Assets/Rooms/";
     private string roomPath = "Assets/Scenes/";
     private static RoomManager _instance;
+    private InputField input;
     public static RoomManager Instance { get { return _instance; } }
     private void Awake()
     {
@@ -25,8 +27,9 @@ public class RoomManager : MonoBehaviour {
         }
     }
 
+
     public bool CreateRoom(string roomName, string roomType = "Default")
-    {
+    {   
         string pathToExistingRoom = sampleRoomPath + roomType;
         string pathToNewRoom = roomPath + roomName;
 
