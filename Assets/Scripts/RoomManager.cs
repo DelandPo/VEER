@@ -7,7 +7,7 @@ using UnityEditor.Experimental.EditorVR.Core;
 using UnityEditor.SceneManagement;
 using UnityEngine.UI;
 
-
+[ExecuteInEditMode]
 public class RoomManager : MonoBehaviour {
 
     private string sampleRoomPath = "Assets/Rooms/";
@@ -42,17 +42,21 @@ public class RoomManager : MonoBehaviour {
 
     public void EditRoom(string roomName)
     {
-        string path = roomPath + roomName + ".unity"; ;
+        string path = roomPath + roomName + ".unity";
 
         if (string.IsNullOrEmpty(roomName) || !isRoomNameValid(path))
         {
             throw new System.Exception("Invalid room name or room doesn't exists!");
         }
+        SceneState.sceneTo = roomName + ".unity";
+        SceneState.alreadyStarted = true;
+        SceneState.gamePlayed = true;
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public bool DeleteRoom(string roomName)
     {
-        string path = roomPath + roomName;
+        string path = roomPath + roomName + ".unity";
 
         if (string.IsNullOrEmpty(roomName) || !isRoomNameValid(path))
         {

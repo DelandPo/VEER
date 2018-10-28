@@ -21,10 +21,12 @@ public class MainMenuController : MonoBehaviour {
     }
 
 
+
     public void CreateRoom()
     {
         Keyboard.SetActive(false);
         string roomName = input.text.Trim().ToString();
         RoomManager.Instance.CreateRoom(roomName);
+        RoomManager.Instance.EditRoom(roomName);
     }
 }
