@@ -25,8 +25,6 @@ public class MainMenuController : MonoBehaviour {
     {
         Keyboard.SetActive(false);
         string roomName = input.text.Trim().ToString();
-        Debug.LogError(roomName);
-        bool error = RoomManager.Instance.CreateRoom(roomName);
-        Debug.LogError(error);
+        RoomManager.Instance.CreateRoom(roomName);
     }
 }
