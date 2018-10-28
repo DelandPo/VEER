@@ -30,19 +30,21 @@ public class RoomManager : MonoBehaviour {
 
     public bool CreateRoom(string roomName, string roomType = "Default")
     {   
-        string pathToExistingRoom = sampleRoomPath + roomType;
-        string pathToNewRoom = roomPath + roomName;
+        string pathToExistingRoom = sampleRoomPath + roomType + ".unity";
+        string pathToNewRoom = roomPath + roomName + ".unity";
 
         if (string.IsNullOrEmpty(roomName) || isRoomNameValid(pathToNewRoom))
         {
             throw new System.Exception("Invalid room name or room already exists!");
         }
-       return AssetDatabase.CopyAsset(pathToExistingRoom, pathToNewRoom);
+        Debug.LogError(pathToExistingRoom);
+        Debug.LogError(pathToNewRoom);
+        return AssetDatabase.CopyAsset(pathToExistingRoom, pathToNewRoom);
     }
 
     public void EditRoom(string roomName)
     {
-        string path = roomPath + roomName;
+        string path = roomPath + roomName + ".unity"; ;
 
         if (string.IsNullOrEmpty(roomName) || !isRoomNameValid(path))
         {
