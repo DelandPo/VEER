@@ -54,6 +54,12 @@ public class MainMenuController : MonoBehaviour {
         ToggleDropdown();
         EditButton.SetActive(true);
     }
+
+    public void EditSelectedRoom()
+    {
+        RoomManager.Instance.EditRoom(selectedRoom);
+
+    }
     public void DeleteRoom()
     {
         ToggleDropdown();
@@ -72,7 +78,6 @@ public class MainMenuController : MonoBehaviour {
 
         selectedRoom = RoomManager.Instance.GetAllRooms("Scenes")[change.value];
 
-
     }
 
     public void PopulateDropdowns()
@@ -86,7 +91,6 @@ public class MainMenuController : MonoBehaviour {
         Keyboard.SetActive(false);
         string roomName = input.text.Trim().ToString();
         RoomManager.Instance.CreateRoom(roomName);
-        RoomManager.Instance.EditRoom(roomName);
         isReady = true;
 
     }
