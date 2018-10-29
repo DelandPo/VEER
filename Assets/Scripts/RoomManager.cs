@@ -37,7 +37,14 @@ public class RoomManager : MonoBehaviour {
         {
             throw new System.Exception("Invalid room name or room already exists!");
         }
-        return AssetDatabase.CopyAsset(pathToExistingRoom, pathToNewRoom);
+        StartCoroutine(StartRoom(pathToExistingRoom, pathToNewRoom));
+        return true;
+    }
+
+    IEnumerator StartRoom(string pathToExistingRoom, string pathToNewRoom)
+    {
+        AssetDatabase.CopyAsset(pathToExistingRoom, pathToNewRoom);
+        yield return null;
     }
 
     public void EditRoom(string roomName)

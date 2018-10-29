@@ -10,6 +10,8 @@ public class MainMenuController : MonoBehaviour {
     public GameObject EditButton;
     public GameObject DeleteButton;
     private string selectedRoom;
+    public bool isReady = false;
+    public GameObject SteamVR;
     private void Awake()
     {
         Keyboard.SetActive(false);
@@ -22,6 +24,19 @@ public class MainMenuController : MonoBehaviour {
         DeleteButton.SetActive(false);
         EditButton.SetActive(false);
     }
+
+    public void Update()
+    {
+        if (isReady)
+        {
+            if (SteamVR.activeSelf == false)
+            {
+                SteamVR.SetActive(true);
+            }
+        }
+     
+    }
+
 
     public void ToggleKeyboard()
     {
@@ -71,5 +86,8 @@ public class MainMenuController : MonoBehaviour {
         Keyboard.SetActive(false);
         string roomName = input.text.Trim().ToString();
         RoomManager.Instance.CreateRoom(roomName);
+        RoomManager.Instance.EditRoom(roomName);
+        isReady = true;
+
     }
 }
