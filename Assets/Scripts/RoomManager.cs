@@ -6,6 +6,7 @@ using System.IO;
 using UnityEditor.Experimental.EditorVR.Core;
 using UnityEditor.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
 
 
 
@@ -83,6 +84,7 @@ public class RoomManager : MonoBehaviour {
 
             if (!string.IsNullOrEmpty(SceneState.sceneTo) && SceneState.alreadyStarted && SceneState.gamePlayed)
             {
+                PlayerSettings.SetVirtualRealitySDKs(BuildTargetGroup.Standalone, new[] { "OpenVR" });
                 Debug.LogError(SceneState.sceneTo);
                 EditorSceneManager.OpenScene(roomPath + SceneState.sceneTo);
                 EditingContextManager.ShowEditorVR();
