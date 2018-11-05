@@ -7,6 +7,7 @@ using UnityEditor.Experimental.EditorVR.Core;
 using UnityEditor.SceneManagement;
 using UnityEngine.UI;
 using UnityEditor;
+using System;
 
 
 
@@ -18,6 +19,7 @@ public class RoomManager : MonoBehaviour {
     private static RoomManager _instance;
     private InputField input;
     public static RoomManager Instance { get { return _instance; } }
+   
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -84,10 +86,13 @@ public class RoomManager : MonoBehaviour {
 
             if (!string.IsNullOrEmpty(SceneState.sceneTo) && SceneState.alreadyStarted && SceneState.gamePlayed)
             {
-                PlayerSettings.SetVirtualRealitySDKs(BuildTargetGroup.Standalone, new[] { "OpenVR" });
-                Debug.LogError(SceneState.sceneTo);
+                //string[] array = new string[1];
+                //string openVR = PlayerSettings.GetVirtualRealitySDKs(BuildTargetGroup.Standalone)[1];
+                //array[0] = openVR;
+                //PlayerSettings.SetVirtualRealitySDKs(BuildTargetGroup.Standalone, array);
+                //Debug.LogError(SceneState.sceneTo);
                 EditorSceneManager.OpenScene(roomPath + SceneState.sceneTo);
-                EditingContextManager.ShowEditorVR();
+                //EditingContextManager.ShowEditorVR();
 
             }
 
