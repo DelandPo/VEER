@@ -92,7 +92,7 @@ public class RoomManager : MonoBehaviour {
                 //PlayerSettings.SetVirtualRealitySDKs(BuildTargetGroup.Standalone, array);
                 //Debug.LogError(SceneState.sceneTo);
                 EditorSceneManager.OpenScene(roomPath + SceneState.sceneTo);
-                //EditingContextManager.ShowEditorVR();
+                EditingContextManager.ShowEditorVR();
 
             }
 

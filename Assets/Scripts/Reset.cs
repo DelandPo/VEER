@@ -11,8 +11,8 @@ public class Reset : MonoBehaviour
     {
         if(SceneState.sceneTo != null && SceneState.alreadyStarted == true && SceneState.gamePlayed == true)
         {
-            UnityEditor.EditorApplication.isPlaying = true;
-            StartCoroutine(Example());
+            //UnityEditor.EditorApplication.isPlaying = true;
+           // StartCoroutine(Example());
             Debug.Log("In the awake function");
             SceneState.sceneTo = null;
             SceneState.alreadyStarted = false;
@@ -25,7 +25,7 @@ public class Reset : MonoBehaviour
         IEnumerator Example()
         {
             yield return new WaitForSeconds(2);
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             EditingContextManager.ShowEditorVR();
         }
 
