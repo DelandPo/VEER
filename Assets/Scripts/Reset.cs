@@ -6,6 +6,8 @@ using UnityEditor.Experimental.EditorVR.Core;
 [ExecuteInEditMode]
 public class Reset : MonoBehaviour
 {
+    public enum InteractableObjects {Hello, World}
+    public InteractableObjects myObjects;
 
     private void Awake()
     {
@@ -17,6 +19,7 @@ public class Reset : MonoBehaviour
             SceneState.sceneTo = null;
             SceneState.alreadyStarted = false;
             SceneState.gamePlayed = false;
+            myObjects = InteractableObjects.Hello;
         }
 
 

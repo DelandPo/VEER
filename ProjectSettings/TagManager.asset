@@ -7,6 +7,7 @@ TagManager:
   - ShowInMiniWorld
   - MiniWorldCamera
   - VRPlayer
+  - Dialpad
   layers:
   - Default
   - TransparentFX
