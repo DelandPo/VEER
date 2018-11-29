@@ -37,6 +37,7 @@ public class DialpadInput : MonoBehaviour {
         if(sucessCode == SucessCode.Instance.getSucessCode().ToString())
         {
             code.text = "Sucess!";
+            Debug.Log("You entered the code sucessfully");
         }
         else
         {
