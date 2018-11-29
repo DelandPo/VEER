@@ -16,8 +16,8 @@ public class RoomManager : MonoBehaviour {
 
     private string sampleRoomPath = "Assets/Rooms/";
     private string roomPath = "Assets/Scenes/";
-    private static RoomManager _instance;
     private InputField input;
+    private static RoomManager _instance;
     public static RoomManager Instance { get { return _instance; } }
    
     private void Awake()

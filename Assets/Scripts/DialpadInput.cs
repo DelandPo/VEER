@@ -22,24 +22,19 @@ public class DialpadInput : MonoBehaviour {
     public void EnterCode(string number)
     {
     
-        if (firstCharacter)
+        if (firstCharacter || code.text == "Wrong Code!!")
         {
             code.text = "";
         }
         code.text += number;
         firstCharacter = false;
-        /*
-        var currentSelectedGameObject = EventSystem.current.currentSelectedGameObject;
-        if(currentSelectedGameObject.tag == "Dialpad")
-             {
-            code.text += currentSelectedGameObject.name;
-             }*/
+     
 
     }
 
     public void CheckResult()
     {
-        if(sucessCode == code.text)
+        if(sucessCode == SucessCode.Instance.getSucessCode().ToString())
         {
             code.text = "Sucess!";
         }

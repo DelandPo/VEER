@@ -5,12 +5,29 @@ using UnityEngine;
 public class SucessCode : MonoBehaviour {
 
 
+
+
     public int sucessCode = 888;
     public enum InteractableItems {Door, Window,Lock }
     public InteractableItems MyItems;
 
-	// Use this for initialization
-	void Start () {
+    private static SucessCode _instance;
+    public static SucessCode Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
