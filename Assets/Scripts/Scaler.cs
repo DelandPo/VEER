@@ -10,6 +10,7 @@ public class Scaler : MonoBehaviour {
         foreach(var v in myGameObjects)
         {
             v.transform.localScale = v.transform.localScale / 1000;
+            v.transform.position = new Vector3(0, 0, 0);
         }
     }
 

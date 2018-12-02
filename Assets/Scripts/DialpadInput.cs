@@ -29,6 +29,7 @@ public class DialpadInput : MonoBehaviour
             code.text = "";
         }
         code.text += number;
+        sucessCode = code.text;
         firstCharacter = false;
 
 
