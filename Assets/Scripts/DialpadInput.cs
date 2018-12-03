@@ -41,6 +41,7 @@ public class DialpadInput : MonoBehaviour
         {
             code.text = "Sucess!";
             Debug.Log("You entered the code sucessfully");
+            SucessCode.Instance.EnteredRightCombination();
         }
         else
         {

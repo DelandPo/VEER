@@ -11,6 +11,7 @@ public class Scaler : MonoBehaviour {
         {
             v.transform.localScale = v.transform.localScale / 1000;
             v.transform.position = new Vector3(0, 0, 0);
+            v.transform.rotation = new Quaternion(0,0,0,0);
         }
     }
 
