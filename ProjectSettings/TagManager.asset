@@ -8,6 +8,9 @@ TagManager:
   - MiniWorldCamera
   - VRPlayer
   - Dialpad
+  - ScaleDown
+  - Template
+  - SpawnKey
   layers:
   - Default
   - TransparentFX

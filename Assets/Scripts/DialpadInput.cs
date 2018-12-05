@@ -4,44 +4,44 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class DialpadInput : MonoBehaviour {
-
+public class DialpadInput : MonoBehaviour
+{
     // Use this for initialization
     public Text code;
     public string sucessCode = "";
     private bool firstCharacter = true;
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void EnterCode(string number)
     {
-    
-        if (firstCharacter)
+
+        if (firstCharacter || code.text == "Wrong Code!!")
         {
             code.text = "";
         }
         code.text += number;
+        sucessCode = code.text;
         firstCharacter = false;
-        /*
-        var currentSelectedGameObject = EventSystem.current.currentSelectedGameObject;
-        if(currentSelectedGameObject.tag == "Dialpad")
-             {
-            code.text += currentSelectedGameObject.name;
-             }*/
+
 
     }
 
     public void CheckResult()
     {
-        if(sucessCode == code.text)
+        if (sucessCode == SucessCode.Instance.getSucessCode().ToString())
         {
             code.text = "Sucess!";
+            Debug.Log("You entered the code sucessfully");
+            SucessCode.Instance.EnteredRightCombination();
         }
         else
         {
