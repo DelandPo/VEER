@@ -11,6 +11,7 @@ TagManager:
   - ScaleDown
   - Template
   - SpawnKey
+  - SuccessMessage
   layers:
   - Default
   - TransparentFX

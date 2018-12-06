@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 95173671811210708}
   - component: {fileID: 114741470257012440}
   - component: {fileID: 65068322604755616}
+  - component: {fileID: 114724640304479330}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: SpawnKey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +115,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114724640304479330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396071777959842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181abf4747bc737419d2bbd0f62f48ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  makeItInvisible: 1
 --- !u!114 &114741470257012440
 MonoBehaviour:
   m_ObjectHideFlags: 1
