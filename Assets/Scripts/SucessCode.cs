@@ -29,6 +29,7 @@ public class SucessCode : MonoBehaviour
     void Start()
     {
         targetGameObject = GameObject.FindGameObjectWithTag("SpawnKey");
+        //targetGameObject.SetActive(false); //Added to test key appearance
     }
 
     // Update is called once per frame
@@ -39,7 +40,8 @@ public class SucessCode : MonoBehaviour
 
     public void EnteredRightCombination()
     {
-        targetGameObject.SendMessage("SpawnKey");
+        targetGameObject.SendMessage("SetObjectActive");
+        //targetGameObject.SetActive(true); //Added to test key apperance
     }
 
     public int getSucessCode()

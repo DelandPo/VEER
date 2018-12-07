@@ -11,6 +11,7 @@ public class MakeObjectsVisible : MonoBehaviour {
         if (makeItInvisible)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = false;
+            //gameObject.SetActive(false);
         }
 	}
 	
@@ -19,8 +20,9 @@ public class MakeObjectsVisible : MonoBehaviour {
 		
 	}
 
-    public void SpawnKey()
+    public void SetObjectActive()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = true;
+        //gameObject.SetActive(false);
     }
 }
