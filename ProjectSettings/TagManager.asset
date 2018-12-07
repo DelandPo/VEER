@@ -12,6 +12,8 @@ TagManager:
   - Template
   - SpawnKey
   - SuccessMessage
+  - Radio
+  - Keyhole
   layers:
   - Default
   - TransparentFX
