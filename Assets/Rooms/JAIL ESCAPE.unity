@@ -2453,9 +2453,59 @@ Prefab:
       propertyPath: instantiationId
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114788228778281160, guid: 11c75a3395f79204880e97d75b8c2ac8,
+        type: 2}
+      propertyPath: useLocalValues
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788228778281160, guid: 11c75a3395f79204880e97d75b8c2ac8,
+        type: 2}
+      propertyPath: onChangeOnly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114788228778281160, guid: 11c75a3395f79204880e97d75b8c2ac8,
+        type: 2}
+      propertyPath: parent
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114547667204648454, guid: 11c75a3395f79204880e97d75b8c2ac8,
+        type: 2}
+      propertyPath: ownershipTransfer
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114788228778281160, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &914492397 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1867921686469138, guid: 11c75a3395f79204880e97d75b8c2ac8,
+    type: 2}
+  m_PrefabInternal: {fileID: 914492396}
+--- !u!114 &914492398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914492397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+--- !u!114 &914492399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914492397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70b26c29c35241468791bcac2337d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &919652728 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 85c5775d75be5dc4396c136e3f6fe201, type: 2}
