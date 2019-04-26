@@ -3655,7 +3655,7 @@ Prefab:
     - target: {fileID: 114286930230094436, guid: 47abcfa57d5a5084f96b4fa62a19af48,
         type: 2}
       propertyPath: ownershipTransfer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47abcfa57d5a5084f96b4fa62a19af48, type: 2}
