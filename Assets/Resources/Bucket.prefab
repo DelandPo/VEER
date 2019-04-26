@@ -25,8 +25,7 @@ GameObject:
   - component: {fileID: 54939308582182502}
   - component: {fileID: 114550829321407194}
   - component: {fileID: 114770261919871506}
-  - component: {fileID: 114788228778281160}
-  - component: {fileID: 114547667204648454}
+  - component: {fileID: 114902451351540554}
   m_Layer: 0
   m_Name: Bucket
   m_TagString: Untagged
@@ -118,32 +117,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300526, guid: 628e5212ccbe5044ba8b70740d37394e, type: 3}
---- !u!114 &114547667204648454
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1867921686469138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  OwnerShipWasTransfered: 0
-  prefixBackup: -1
-  synchronization: 3
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 1
-  ObservedComponents:
-  - {fileID: 4005026014226358}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
-  currentMasterID: -1
-  isRuntimeInstantiated: 0
 --- !u!114 &114550829321407194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownAdditionalPhotonviews: []
---- !u!114 &114788228778281160
+--- !u!114 &114902451351540554
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -194,14 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1867921686469138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af018577f438cf542b899ec9138bf9e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cdedd0eec13b764e80c73827131190f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: 1
-  position: 0
-  rotation: 0
-  scale: 0
-  velocity: 1
-  angularVelocity: 1
-  useLocalValues: 1
-  onChangeOnly: 1
+  linkedView: {fileID: 0}
