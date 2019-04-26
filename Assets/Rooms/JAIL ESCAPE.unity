@@ -2522,10 +2522,10 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 1
+  synchronization: 0
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 1
+  ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 275267367}
   ObservedComponentsFoldoutOpen: 1
@@ -2550,8 +2550,8 @@ MonoBehaviour:
   scale: 0
   velocity: 1
   angularVelocity: 1
-  useLocalValues: 1
-  onChangeOnly: 1
+  useLocalValues: 0
+  onChangeOnly: 0
 --- !u!4 &919652728 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 85c5775d75be5dc4396c136e3f6fe201, type: 2}
