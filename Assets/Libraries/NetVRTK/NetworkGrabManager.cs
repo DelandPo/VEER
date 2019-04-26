@@ -53,9 +53,6 @@
 
         private void HandleUngrab(object sender, InteractableObjectEventArgs e) {
 
-            float speed = 2.5f;
-            var origin = transform.position;
-           transform.position =  new Vector3(origin.x, 0, origin.z);
             InitState(0);
             SendState();
         }
