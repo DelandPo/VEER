@@ -3,6 +3,7 @@
     using VRTK;
     using NetBase;
     using Hashtable = ExitGames.Client.Photon.Hashtable;
+    using System.Collections;
 
     [RequireComponent(typeof(VRTK_InteractableObject))]
     public class NetworkGrabManager : NetworkBehaviour {
@@ -20,7 +21,6 @@
 
         void Awake() {
             io = GetComponent<VRTK_InteractableObject>();
-            rb = GetComponent<Rigidbody>();
             nref = NetworkReference.FromObject(this.gameObject);
             propKey = PROP_KEY_ID + nref.parentHandleId + "$" + (nref.pathFromParent != null ? nref.pathFromParent : "") + "$";
             var dummy = PropertyEventHandler.Instance;
@@ -41,10 +41,6 @@
 
         private void HandleGrab(object sender, InteractableObjectEventArgs e) {
 
-            Debug.Log("anandapoudel");
-
-            rb.isKinematic = true;
-            rb.useGravity = false;
             if (nref.IsPhotonView) {
                 nref.GetPhotonView().TransferOwnership(PhotonNetwork.player);
             }
@@ -56,8 +52,10 @@
         }
 
         private void HandleUngrab(object sender, InteractableObjectEventArgs e) {
-            rb.isKinematic = false;
-            rb.useGravity = true;
+
+            float speed = 2.5f;
+            var origin = transform.position;
+           transform.position =  new Vector3(origin.x, 0, origin.z);
             InitState(0);
             SendState();
         }
@@ -65,6 +63,16 @@
         private void InitState(int ownerId) {
             grabOwner = ownerId;
             io.isGrabbable = (grabOwner == 0);
+        }
+
+        private IEnumerator move(Vector3 origin, Vector3 destination, float speed)
+        {
+            while (transform.position != destination)
+            {
+                transform.position = Vector3.Lerp(origin, destination, Time.deltaTime * speed);
+                yield return new WaitForEndOfFrame();
+
+            }
         }
 
         //
