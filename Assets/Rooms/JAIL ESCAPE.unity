@@ -2869,6 +2869,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 862897973}
     m_Modifications:
+    - target: {fileID: 114547667204648454, guid: 11c75a3395f79204880e97d75b8c2ac8,
+        type: 2}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4005026014226358, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.293
@@ -2933,20 +2938,25 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4005026014226358, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4005026014226358, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4005026014226358, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 54939308582182502, guid: 11c75a3395f79204880e97d75b8c2ac8,
         type: 2}
       propertyPath: m_Interpolate
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114547667204648454, guid: 11c75a3395f79204880e97d75b8c2ac8,
+        type: 2}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114788228778281160, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
@@ -2981,25 +2991,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70b26c29c35241468791bcac2337d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &914492400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 914492397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af018577f438cf542b899ec9138bf9e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: 0
-  position: 2
-  rotation: 2
-  scale: 0
-  velocity: 1
-  angularVelocity: 1
-  useLocalValues: 0
-  onChangeOnly: 1
 --- !u!199 &914492407
 ParticleSystemRenderer:
   serializedVersion: 4
