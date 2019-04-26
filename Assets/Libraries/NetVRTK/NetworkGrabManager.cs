@@ -41,6 +41,8 @@
 
         private void HandleGrab(object sender, InteractableObjectEventArgs e) {
 
+            Debug.Log("anandapoudel");
+
             rb.isKinematic = true;
             rb.useGravity = false;
             if (nref.IsPhotonView) {
