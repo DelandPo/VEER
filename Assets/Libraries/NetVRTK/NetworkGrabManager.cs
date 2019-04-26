@@ -42,6 +42,7 @@
         private void HandleGrab(object sender, InteractableObjectEventArgs e) {
 
             rb.isKinematic = true;
+            rb.useGravity = false;
             if (nref.IsPhotonView) {
                 nref.GetPhotonView().TransferOwnership(PhotonNetwork.player);
             }
@@ -54,6 +55,7 @@
 
         private void HandleUngrab(object sender, InteractableObjectEventArgs e) {
             rb.isKinematic = false;
+            rb.useGravity = true;
             InitState(0);
             SendState();
         }

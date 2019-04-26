@@ -2422,7 +2422,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4005026014226358, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 4005026014226358, guid: 11c75a3395f79204880e97d75b8c2ac8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2505,7 +2505,7 @@ Prefab:
     - target: {fileID: 54939308582182502, guid: 11c75a3395f79204880e97d75b8c2ac8,
         type: 2}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -2550,7 +2550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownAdditionalPhotonviews: []
-  Bucket: {fileID: 914492397}
 --- !u!114 &914492400
 MonoBehaviour:
   m_ObjectHideFlags: 0
