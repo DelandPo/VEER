@@ -7,12 +7,11 @@
     [RequireComponent(typeof(VRTK_InteractableObject))]
     public class NetworkGrabManager : NetworkBehaviour {
         public PhotonView[] ownAdditionalPhotonviews;
-
         private int grabOwner;
 
         private VRTK_InteractableObject io;
         private NetworkReference nref;
-
+        private Rigidbody rb;
         public int currentGrabOwner {
             get {
                 return grabOwner;
@@ -21,6 +20,7 @@
 
         void Awake() {
             io = GetComponent<VRTK_InteractableObject>();
+            rb = GetComponent<Rigidbody>();
             nref = NetworkReference.FromObject(this.gameObject);
             propKey = PROP_KEY_ID + nref.parentHandleId + "$" + (nref.pathFromParent != null ? nref.pathFromParent : "") + "$";
             var dummy = PropertyEventHandler.Instance;
@@ -40,6 +40,8 @@
         }
 
         private void HandleGrab(object sender, InteractableObjectEventArgs e) {
+
+            rb.isKinematic = true;
             if (nref.IsPhotonView) {
                 nref.GetPhotonView().TransferOwnership(PhotonNetwork.player);
             }
@@ -51,6 +53,7 @@
         }
 
         private void HandleUngrab(object sender, InteractableObjectEventArgs e) {
+            rb.isKinematic = false;
             InitState(0);
             SendState();
         }
